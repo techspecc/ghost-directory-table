@@ -1,0 +1,84 @@
+.directory-table-wrap {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto 24px;
+  overflow-x: auto;
+}
+
+.directory-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 320px;
+  background: #fff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.directory-table caption {
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.directory-table th,
+.directory-table td {
+  border: 1px solid #d0d0d0;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+  background: #fff;
+}
+
+.directory-table th {
+  background: #f6f6f6;
+  font-weight: 600;
+}
+
+.directory-table a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.directory-table a:hover,
+.directory-table a:focus {
+  text-decoration: none;
+}
+
+.directory-table [data-sortable] {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.directory-table [data-sortable]::after {
+  content: '';
+  display: inline-block;
+  border: 5px solid transparent;
+  border-top-color: #888;
+  margin-left: 6px;
+  opacity: 0;
+  transform: translateY(2px);
+}
+
+.directory-table [data-sort-direction="asc"]::after,
+.directory-table [data-sort-direction="desc"]::after {
+  opacity: 1;
+}
+
+.directory-table [data-sort-direction="desc"]::after {
+  transform: rotate(180deg) translateY(-2px);
+}
+
+.directory-table tbody tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+@media (max-width: 640px) {
+  .directory-table th,
+  .directory-table td {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+}

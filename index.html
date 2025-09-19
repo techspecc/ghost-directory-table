@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ghost Publication Directory Table</title>
+  <link rel="stylesheet" href="assets/css/directory-table.css">
+</head>
+<body>
+  <main>
+    <h1>Ghost Publication Directory Table</h1>
+    <p>
+      This repository contains a lightweight, client-side sortable table that you can embed into
+      a Ghost publication using a custom HTML card or code injection. When working inside the Ghost
+      editor, drop the &lt;div class="directory-table-wrap"&gt;...&lt;/div&gt; block into an HTML line block
+      (HTML card) so the markup renders correctly. Replace the sample rows with your own content and
+      drop the markup anywhere you need a directory-style listing.
+    </p>
+
+    <div class="directory-table-wrap">
+      <table class="directory-table" id="ghost-directory" data-sortable-table>
+        <caption>Sample listing &ndash; replace with your own Ghost publications.</caption>
+        <colgroup>
+          <col class="col-year">
+          <col class="col-title">
+          <col class="col-focus">
+          <col class="col-link">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col" data-sort-type="number">Year</th>
+            <th scope="col">Publication</th>
+            <th scope="col">Focus</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2024</td>
+            <td>Starter Weekly</td>
+            <td>Newsletters</td>
+            <td><a href="https://example.com/starter-weekly" rel="noopener">View publication</a></td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Creator Stories</td>
+            <td>Case Studies</td>
+            <td><a href="https://example.com/creator-stories" rel="noopener">View publication</a></td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>Independent Voices</td>
+            <td>Editorial</td>
+            <td><a href="https://example.com/independent-voices" rel="noopener">View publication</a></td>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>Ghost Builders</td>
+            <td>Product Updates</td>
+            <td><a href="https://example.com/ghost-builders" rel="noopener">View publication</a></td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>Community Dispatch</td>
+            <td>Behind the Scenes</td>
+            <td><a href="https://example.com/community-dispatch" rel="noopener">View publication</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script src="assets/js/sortable-table.js"></script>
+</body>
+</html>
