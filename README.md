@@ -4,6 +4,8 @@ Licensed under the MIT License; you may use, modify, and redistribute this table
 
 This guide explains how to preview, embed, and customize a sortable directory table for Ghost publications. Everything ships as plain HTML, CSS, and vanilla JavaScript so you can paste it into Ghost or integrate it into your theme.
 
+![Ghost directory table demo](assets/ghost-sortable-table-1.gif)
+
 ## Files Included
 - `index.html` — Demo page with sample rows and assets wired up.
 - `assets/css/directory-table.css` — Scoped table styles.
