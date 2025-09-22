@@ -1,29 +1,35 @@
 # Ghost Publication Directory Table
 
-A lightweight, shareable sortable table for listing Ghost publications. The markup, styles, and
-JavaScript are framework-free, making it easy to drop into a Ghost custom HTML card, portal page,
-or reusable snippet.
+Licensed under the MIT License; you may use, modify, and redistribute this table.
 
-## Features
-- Accessible, keyboard-friendly column sorting with numeric support
-- Minimal, theme-agnostic styling that you can override in your theme
-- Drop-in HTML snippet ready for Ghost's editor or site-wide code injection
+This guide explains how to preview, embed, and customize a sortable directory table for Ghost publications. Everything ships as plain HTML, CSS, and vanilla JavaScript so you can paste it into Ghost or integrate it into your theme.
 
-## Repo structure
-- `index.html` — demo page that showcases the table and sample rows
-- `assets/css/directory-table.css` — scoped styles for the table wrapper and headers
-- `assets/js/sortable-table.js` — dependency-free sorter that binds to tables marked with `data-sortable-table`
+## Files Included
+- `index.html` — Demo page with sample rows and assets wired up.
+- `assets/css/directory-table.css` — Scoped table styles.
+- `assets/js/sortable-table.js` — Dependency-free sorter bound to elements tagged with `data-sortable-table`.
 
-## Quick start
-1. Clone or download this directory.
-2. Open `index.html` in your browser to see the table in action.
-3. Replace the sample `<tbody>` rows with your own publication data.
+## Highlights
+- Keyboard-friendly column sorting with optional numeric comparison.
+- Neutral styling that plays nicely with existing Ghost themes.
+- Drop-in markup ready for Ghost cards or site-wide injection.
 
-## Using inside Ghost
-### Option 1: Custom HTML card (per page)
-1. In the Ghost editor, add a **HTML** card.
-2. Paste the snippet below, replacing the sample rows with your own.
-3. Publish/update the post.
+## Preview Locally
+1. Clone or download this folder.
+2. Open `index.html` in a browser.
+3. Swap the sample `<tbody>` rows with your publication data to see it live.
+
+## Embed in Ghost
+
+### Option 1: Custom HTML card (single post/page)
+1. In the Ghost editor, add an **HTML** card.
+2. Paste the snippet below and replace the sample rows.
+3. Publish or update the post.
+
+### Option 2: Site-wide code injection
+1. Paste the CSS block into **Settings → Code injection → Site header**.
+2. Paste the script block into **Site footer**.
+3. Insert the table markup wherever you need the directory (without repeating the style/script blocks).
 
 ```html
 <style>
@@ -129,15 +135,10 @@ or reusable snippet.
 </script>
 ```
 
-### Option 2: Site-wide code injection
-1. Add the CSS block to **Settings → Code injection → Site header**.
-2. Add the script to **Site footer**.
-3. Wherever you want the directory, insert the HTML table (without repeating the style/script blocks).
-
-## Customisation tips
-- Use `data-sort-type="number"` on headers that contain numeric values (years, counts, etc.).
-- Add `data-sort-disabled="true"` to any header that should stay unsortable.
-- Override the default look by adding your own CSS targeting `.directory-table` in your Ghost theme.
+## Customize
+- Add `data-sort-type="number"` to numeric headers so the sorter treats values as numbers.
+- Use `data-sort-disabled="true"` on any header that should stay unsortable.
+- Override the visuals by targeting `.directory-table` in your Ghost theme or wrapping it in your own class.
 
 ## License
-Released under the MIT License. See `LICENSE` if you plan to share or fork.
+Released under the MIT License. See `LICENSE` for full text.
